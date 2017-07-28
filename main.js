@@ -32,7 +32,7 @@ function question2() {
   console.log(arrayBetween.join("\n"));
 }
 
-//there was a typo in the instructions that had an item with a currency code of GBP, and it does not show up with your list of USD (5 items), my list of items accounts for only items between 14 and 18 USD.
+//there was a typo in the instructions that had an item with a currency-code of GBP, and it does not show up with your list of USD (5 items), my list of items accounts for only items between 14 and 18 USD.
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
