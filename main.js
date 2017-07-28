@@ -22,21 +22,43 @@ function question1() {
 
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2() {
-  // Answer:
+  let arrayBetween = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].price >= 14 && data[i].price <= 18 && data[i].currency_code === "USD") {
+      arrayBetween.push(data[i].title);
+    }
+
+  }
+  console.log(arrayBetween);
 }
 
+//there was a typo in the instructions that had an item with a currency code of GBP, and it does not show up with your list of USD (5 items), my list of items accounts for only items between 14 and 18 USD.
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3() {
-  // Answer:
+
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].currency_code === "GBP") {
+
+      console.log(data[i].title + " costs " + "$" + data[i].price + ".");
+
+    }
+
+
+  }
 }
 
 
 // 4: Display a list of all items who are made of wood.
 function question4() {
-  // Answer:
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].materials.includes("wood")) {
+      console.log(data[i].title);
+    }
+  }
 }
+
 
 
 // 5: Which items are made of eight or more materials? 
