@@ -16,7 +16,7 @@ function question1() {
     avg = sum / data.length;
     avgDollars = Math.round(100 * avg) / 100;
   }
-  console.log("The average price is " + "$" + avgDollars + ".");
+  console.log("The average price is " + "$" + avgDollars);
 }
 
 
@@ -29,7 +29,7 @@ function question2() {
     }
 
   }
-  console.log(arrayBetween);
+  console.log(arrayBetween.join("\n"));
 }
 
 //there was a typo in the instructions that had an item with a currency code of GBP, and it does not show up with your list of USD (5 items), my list of items accounts for only items between 14 and 18 USD.
@@ -54,7 +54,7 @@ function question3() {
 function question4() {
   for (let i = 0; i < data.length; i++) {
     if (data[i].materials.includes("wood")) {
-      console.log(data[i].title);
+      console.log(data[i].title + " is made of wood.");
     }
   }
 }
@@ -66,7 +66,7 @@ function question4() {
 function question5() {
   for (let i = 0; i < data.length; i++) {
     if (data[i].materials.length >= 8) {
-      console.log(data[i].title + " has " + data[i].materials.length + " materials: " + data[i].materials);
+      console.log(data[i].title + " has " + data[i].materials.length + " materials: " + ("\n") + "- " + data[i].materials.join("\n" + "- "));
 
     }
   }
